@@ -3,57 +3,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-900 text-gray-100">
 
-  <section class="bg-gray-100 py-12 px-4 md:px-8" id="contact">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+  <section class="max-w-4xl mx-auto px-4 py-12" id="contact">
+    <h2 class="text-3xl font-bold mb-8 text-center text-white">Contact Us</h2>
 
-      <!-- Direct Contact Info -->
-      <div class="bg-white rounded-2xl shadow p-6 mb-10">
-        <h3 class="text-xl font-semibold mb-4">✅ Here’s What We’ll Include:</h3>
-        <ul class="space-y-3 text-gray-700">
-          <li>
-            ✅ <strong>Phone:</strong> <a href="tel:+2349072167832" class="text-blue-600 hover:underline">+2349072167832</a>
-          </li>
-          <li>
-            ✅ <strong>WhatsApp:</strong> 
-            <a href="https://wa.me/2349072167832" target="_blank" class="text-green-600 hover:underline">Click to chat</a>
-          </li>
-          <li>
-            ✅ <strong>Email:</strong> 
-            <a href="mailto:teecinotc@gmail.com" class="text-red-600 hover:underline">teecinotc@gmail.com</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Direct Contact Info -->
+    <div class="bg-gray-800 rounded-xl shadow-md p-6 mb-10">
+      <h3 class="text-xl font-semibold mb-4 text-white">✅ 1. Direct Contact Info</h3>
+      <ul class="space-y-4 text-lg text-gray-300">
+        <li>
+          📞 <strong class="text-white">Phone:</strong> 
+          <a href="tel:+2349072167832" class="text-blue-400 hover:underline">+2349072167832</a>
+        </li>
+        <li>
+          💬 <strong class="text-white">WhatsApp:</strong> 
+          <a href="https://wa.me/2349072167832" target="_blank" class="text-green-400 hover:underline">Click to chat</a>
+        </li>
+        <li>
+          📩 <strong class="text-white">Email:</strong> 
+          <a href="mailto:teecinotc@gmail.com" class="text-red-400 hover:underline">teecinotc@gmail.com</a>
+        </li>
+      </ul>
+    </div>
 
-      <!-- Contact Form -->
-      <div class="bg-white rounded-2xl shadow p-6">
-        <form action="#" method="POST" class="space-y-6">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="name" name="name" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-          </div>
+    <!-- Contact Form -->
+    <div class="bg-gray-800 rounded-xl shadow-md p-6">
+      <h3 class="text-xl font-semibold mb-4 text-white">✅ 2. Contact Form</h3>
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+          <input type="text" id="name" name="name" required 
+                 class="mt-1 w-full bg-gray-900 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
 
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" id="email" name="email" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-          </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+          <input type="email" id="email" name="email" required 
+                 class="mt-1 w-full bg-gray-900 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
 
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-            <textarea id="message" name="message" rows="5" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
-          </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+          <textarea id="message" name="message" rows="5" required 
+                    class="mt-1 w-full bg-gray-900 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
 
-          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition duration-300">
-            Send Message
-          </button>
-        </form>
-      </div>
+        <button type="submit" 
+                class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition duration-300">
+          Send Message
+        </button>
+      </form>
     </div>
   </section>
 
