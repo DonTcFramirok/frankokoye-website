@@ -1,25 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Info - Nigeria & USA</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-gray-100 p-6">
-  <nav class="mb-6">
-    <a href="index.html" class="mr-4 hover:text-blue-400">Home</a>
-    <a href="about.html" class="mr-4 hover:text-blue-400">About</a>
-    <a href="resume.html" class="mr-4 hover:text-blue-400">Resume</a>
-    <a href="projects.html" class="mr-4 hover:text-blue-400">Projects</a>
-    <a href="blog.html" class="mr-4 hover:text-blue-400">Blog</a>
-    <a href="contact.html" class="mr-4 hover:text-blue-400">Contact</a>
-    <a href="payment.html" class="mr-4 hover:text-blue-400">Payment</a>
-    <a href="others.html" class="hover:text-blue-400">Others</a>
-  </nav>
-  <main>
-    <h1 class="text-3xl font-bold mb-4">Payment Info - Nigeria & USA</h1>
-    <p>This is the Payment page for Frank Okoye's website.</p>
-  </main>
+<body class="bg-gray-900 text-gray-100">
+
+  <section class="max-w-4xl mx-auto px-4 py-12" id="payment">
+    <h2 class="text-3xl font-bold mb-8 text-center text-white">💳 Payment Details</h2>
+
+    <!-- American Account -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow-md mb-10">
+      <h3 class="text-xl font-semibold text-white mb-4">🇺🇸 American Account</h3>
+      <div class="space-y-2 text-gray-300 text-sm">
+        <p><strong class="text-white">Account Name:</strong> FRANK TOBECHUKWU OKOYE</p>
+        <p><strong class="text-white">Bank Name:</strong> Lead Bank</p>
+        <p><strong class="text-white">Account Number:</strong> <span id="usAccount">213163430359</span>
+          <button onclick="copyText('usAccount')" class="ml-2 bg-blue-600 px-2 py-1 rounded text-white hover:bg-blue-700 text-xs">Copy</button>
+        </p>
+        <p><strong class="text-white">Routing Number:</strong> 101019644</p>
+        <p><strong class="text-white">Account Type:</strong> Personal Checking</p>
+        <p><strong class="text-white">Bank Address:</strong> 9450 Southwest Gemini Drive, Beaverton, OR, 97008, USA</p>
+      </div>
+    </div>
+
+    <!-- Nigerian Account -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow-md mb-10">
+      <h3 class="text-xl font-semibold text-white mb-4">🇳🇬 Nigerian Account</h3>
+      <div class="space-y-2 text-gray-300 text-sm">
+        <p><strong class="text-white">Account Name:</strong> Frank Tobechukwu Okoye</p>
+        <p><strong class="text-white">Bank:</strong> Opay</p>
+        <p><strong class="text-white">Account Number:</strong> <span id="ngAccount">8034137437</span>
+          <button onclick="copyText('ngAccount')" class="ml-2 bg-green-600 px-2 py-1 rounded text-white hover:bg-green-700 text-xs">Copy</button>
+        </p>
+      </div>
+    </div>
+
+    <!-- Payment Form -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+      <h3 class="text-xl font-semibold text-white mb-4">💰 Make a Payment</h3>
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+          <input type="text" id="name" name="name" required
+                 class="mt-1 w-full bg-gray-900 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+          <input type="email" id="email" name="email" required
+                 class="mt-1 w-full bg-gray-900 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label for="amount" class="block text-sm font-medium text-gray-300">Amount</label>
+          <input type="number" id="amount" name="amount" required
+                 class="mt-1 w-full bg-gray-900 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label for="purpose" class="block text-sm font-medium text-gray-300">Purpose</label>
+          <textarea id="purpose" name="purpose" rows="3"
+                    class="mt-1 w-full bg-gray-900 text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <button type="submit"
+                class="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700 transition duration-300">
+          Pay Now
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Copied: " + text);
+      });
+    }
+  </script>
+
 </body>
 </html>
